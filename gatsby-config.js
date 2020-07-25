@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Tereza Texlová`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -35,6 +35,13 @@ module.exports = {
         spaceId: `f8cps2fo9gsu`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        // Configure SASS to process Tailwind
+        postCssPlugins: [require("tailwindcss")],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
