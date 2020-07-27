@@ -1,0 +1,110 @@
+@mixin before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 9;
+  display: block;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #ff4545;
+  transition: width 0.4s ease, -webkit-transform 0.3s;
+  transition: width 0.4s ease, transform 0.3s;
+  transition: width 0.4s ease, transform 0.3s, -webkit-transform 0.3s;
+  margin-top: 14px;
+}
+
+@mixin after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  margin-top: 14px;
+  transition: width 0s ease, background 0.4s ease, -webkit-transform 0.3s;
+  transition: width 0s ease, transform 0.3s, background 0.4s ease;
+  transition: width 0s ease, transform 0.3s, background 0.4s ease,
+    -webkit-transform 0.3s;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 40px 50px;
+  transition: 0.3s;
+
+  .active {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &.sticked {
+    background-color: #202020;
+    padding: 15px 50px;
+  }
+  .logo-container {
+    flex: 3;
+    color: white;
+  }
+  .flex-fill {
+    flex: 1 1 auto !important;
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 16px 0 0;
+      padding: 0;
+      a {
+        transition: 0.3s;
+        display: block;
+        position: relative;
+        color: #989898;
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+        }
+        &.active {
+          color: #fff;
+          text-decoration: none;
+          &:before {
+            @include before;
+          }
+          &:after {
+            width: 100%;
+            background-color: #ff4545;
+            transition: width 0.4s ease, -webkit-transform 0.3s ease;
+            transition: width 0.4s ease, transform 0.3s ease;
+            transition: width 0.4s ease, transform 0.3s ease,
+              -webkit-transform 0.3s ease;
+          }
+        }
+
+        &:before {
+          @include before;
+        }
+        &:hover:before {
+          width: 100%;
+          background: transparent;
+          transition: all 0s ease;
+        }
+        &:after {
+          @include after;
+        }
+        &:hover:after {
+          width: 100%;
+          background-color: #ff4545;
+          transition: width 0.4s ease, -webkit-transform 0.3s ease;
+          transition: width 0.4s ease, transform 0.3s ease;
+          transition: width 0.4s ease, transform 0.3s ease,
+            -webkit-transform 0.3s ease;
+        }
+      }
+    }
+  }
+}
