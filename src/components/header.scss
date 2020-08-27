@@ -38,15 +38,34 @@
   padding: 40px 50px;
   transition: 0.3s;
 
+  &.sticky {
+    background-color: #202020;
+    padding: 15px 50px;
+
+    li a {
+      color: #989898;
+    }
+    ul li > a.active,
+    ul li > a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    ul li a:before {
+      transition: width 0.4s ease, transform 0.3s;
+      background-color: #ff4545;
+      transform: translateY(-16px);
+    }
+    ul li a:after {
+      transform: translateY(-16px);
+    }
+  }
+
   .active {
     color: #fff;
     text-decoration: none;
   }
 
-  &.sticked {
-    background-color: #202020;
-    padding: 15px 50px;
-  }
   .logo-container {
     flex: 3;
     color: white;

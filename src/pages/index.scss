@@ -1,10 +1,18 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: #989898;
 $bg-color: #202020;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  background-color: $bg-color;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1.38;
+  margin-bottom: 23px;
 }
 
 .inversed-color {
@@ -37,4 +45,9 @@ body {
     top: 40%;
     position: absolute !important;
   }
+}
+section {
+  padding: 140px 0;
+  position: relative;
+  overflow: hidden;
 }

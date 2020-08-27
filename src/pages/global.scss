@@ -1,3 +1,20 @@
 @tailwind base;
+
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-2xl;
+  @apply text-white;
+  @apply mb-12;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-red-600 underline;
+}
+
 @tailwind components;
+
 @tailwind utilities;

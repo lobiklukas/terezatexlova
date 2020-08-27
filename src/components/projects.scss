@@ -1,0 +1,19 @@
+h2.title:before {
+  background-color: #d33938;
+}
+
+h2.title:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #d03838;
+  margin-bottom: 30px;
+}
+
+.overlay-red:hover {
+  transition: 0.4s ease;
+  opacity: 0.5;
+  color: #d03838;
+  fill: #d03838;
+}
