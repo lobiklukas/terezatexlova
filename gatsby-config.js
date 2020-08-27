@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Tereza Texlová`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@lukaslobik`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,13 +13,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `fonts`,
-        path: `${__dirname}/src/fonts`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -39,9 +32,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `f8cps2fo9gsu`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        // Learn about environment variables: https://gatsby.dev/env-vars
       },
     },
     {
