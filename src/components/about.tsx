@@ -5,7 +5,7 @@ import React from "react"
 import ImageWaves from "./image-waves"
 import SEO from "./seo"
 
-const LandingPage = () => {
+const About = () => {
   const data = useStaticQuery(
     graphql`
       query LandingPage {
@@ -34,7 +34,7 @@ const LandingPage = () => {
   )
   console.log(JSON.stringify(data, null, 2))
   return (
-    <div className="banner-hero items-center flex">
+    <div id="About" className="banner-hero items-center flex">
       <SEO title="Home" />
       <div className="pattern">
         <ImageWaves />
@@ -70,12 +70,12 @@ const LandingPage = () => {
   )
 }
 
-LandingPage.propTypes = {
+About.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-LandingPage.defaultProps = {
+About.defaultProps = {
   siteTitle: ``,
 }
 
-export default LandingPage
+export default About

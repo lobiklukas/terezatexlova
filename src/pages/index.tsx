@@ -1,15 +1,13 @@
 import React from "react"
-
+import About from "../components/about"
 import Layout from "../components/layout"
-import LandingPage from "../components/landing-page"
 import Projects from "../components/projects"
-
 import "./global.scss"
 import "./index.scss"
 
 const IndexPage = () => (
   <Layout>
-    <LandingPage />
+    <About />
     <Projects />
   </Layout>
 )

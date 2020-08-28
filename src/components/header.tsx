@@ -25,24 +25,24 @@ const Header = ({ siteTitle }) => {
       }`}
     >
       <div className="logo-container mr-5 float-left">
-        <Link to="/">{siteTitle}</Link>
+        <Link to="#About">{siteTitle}</Link>
       </div>
       <div className=" flex-fill flex items-center justify-between float-right">
         <div className="flex-fill">
           <ul className="m-0 p-0 flex justify-around">
             <li>
-              <Link className="active" to="/">
+              <Link className="active" to="#About">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/">Projects</Link>
+              <Link to="#Projects">Projects</Link>
             </li>
             <li>
-              <Link to="/">Resumé</Link>
+              <Link to="#About">Resumé</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="#About">Contact</Link>
             </li>
           </ul>
         </div>

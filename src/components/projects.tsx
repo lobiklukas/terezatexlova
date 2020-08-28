@@ -30,7 +30,7 @@ const Projects = () => {
   )
   console.log(data)
   return (
-    <section className="container mx-auto ">
+    <section id="Projects" className="container mx-auto ">
       <h2 className="title text-white">Projects</h2>
       <h4>
         Labore quia molestiae incidunt id omnis. Quia officia modi officia
@@ -48,7 +48,11 @@ const Projects = () => {
       <div className="flex items-baseline justify-between">
         {data.allContentfulProjects.edges.map(item => (
           <div className="col-4 mt-10 min-w-1/4 p-4">
-            <img src={item.node.image.resize.src} class="overlay-red" alt="" />
+            <img
+              src={item.node.image.resize.src}
+              className="overlay-red"
+              alt=""
+            />
             <p>{item.node.description.content[0].content[0].value}</p>
           </div>
         ))}
